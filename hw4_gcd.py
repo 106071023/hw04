@@ -2,8 +2,12 @@
 
 
 def compute_gcd(a, b):
-    # your code here ...
-    return ...
+    x=max(a,b)
+    y=min(a,b)
+    z=x%y
+    if z == 0:
+        return y
+    return compute_gcd(y,z)
 
 
 a = int(input("輸入第一個數字: "))
