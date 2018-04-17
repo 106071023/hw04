@@ -2,8 +2,12 @@
 
 
 def is_prime(num):
-    # your code here ...
-    return ...
+    if num == 1:
+        return False
+    for i in range(2,int(num**(1/2)+1)):
+        if num%i == 0:
+            return False
+    return True
 
 
 num = int(input("Enter a number: "))
